@@ -1,4 +1,4 @@
-package ru.vierinmoon.springboot.SpringBoot311.controller;
+package ru.vierinmoon.springboot.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

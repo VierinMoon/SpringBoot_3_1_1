@@ -1,6 +1,6 @@
-package ru.vierinmoon.springboot.SpringBoot311.service;
+package ru.vierinmoon.springboot.demo.service;
 
-import ru.vierinmoon.springboot.SpringBoot311.model.User;
+import ru.vierinmoon.springboot.demo.model.User;
 
 import java.util.List;
 

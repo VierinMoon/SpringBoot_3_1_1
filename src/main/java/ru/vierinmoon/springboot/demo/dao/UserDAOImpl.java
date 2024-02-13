@@ -1,9 +1,9 @@
-package ru.vierinmoon.springboot.SpringBoot311.dao;
+package ru.vierinmoon.springboot.demo.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
-import ru.vierinmoon.springboot.SpringBoot311.model.User;
+import ru.vierinmoon.springboot.demo.model.User;
 
 import java.util.List;
 

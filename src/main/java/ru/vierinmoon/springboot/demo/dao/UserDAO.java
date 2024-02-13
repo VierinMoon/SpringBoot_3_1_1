@@ -1,6 +1,6 @@
-package ru.vierinmoon.springboot.SpringBoot311.dao;
+package ru.vierinmoon.springboot.demo.dao;
 
-import ru.vierinmoon.springboot.SpringBoot311.model.User;
+import ru.vierinmoon.springboot.demo.model.User;
 
 import java.util.List;
 

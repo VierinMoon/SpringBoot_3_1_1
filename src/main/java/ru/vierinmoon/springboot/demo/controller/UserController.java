@@ -1,16 +1,17 @@
-package ru.vierinmoon.springboot.SpringBoot311.controller;
+package ru.vierinmoon.springboot.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.vierinmoon.springboot.SpringBoot311.model.User;
-import ru.vierinmoon.springboot.SpringBoot311.service.UserService;
+import ru.vierinmoon.springboot.demo.model.User;
+import ru.vierinmoon.springboot.demo.service.UserService;
 
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
+    private static final String REDIRECT_USERS = "redirect:/users";
 
     private UserService userService;
 
@@ -34,7 +35,7 @@ public class UserController {
     @PostMapping
     public String addUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
-        return "redirect:/users";
+        return REDIRECT_USERS;
     }
 
     @GetMapping("/update")
@@ -46,12 +47,12 @@ public class UserController {
     @PostMapping("/updateUser")
     public String updateUser(@ModelAttribute("user") User user) {
         userService.updateUser(user);
-        return  "redirect:/users";
+        return  REDIRECT_USERS;
     }
 
     @PostMapping("/delete")
     public String removeUser(@RequestParam("id") Long id) {
         userService.removeUserById(id);
-        return "redirect:/users";
+        return REDIRECT_USERS;
     }
 }

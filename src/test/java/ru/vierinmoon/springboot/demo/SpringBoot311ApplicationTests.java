@@ -1,4 +1,4 @@
-package ru.vierinmoon.springboot.SpringBoot311;
+package ru.vierinmoon.springboot.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

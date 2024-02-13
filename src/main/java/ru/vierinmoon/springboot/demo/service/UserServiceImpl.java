@@ -1,10 +1,10 @@
-package ru.vierinmoon.springboot.SpringBoot311.service;
+package ru.vierinmoon.springboot.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.vierinmoon.springboot.SpringBoot311.dao.UserDAO;
-import ru.vierinmoon.springboot.SpringBoot311.model.User;
+import ru.vierinmoon.springboot.demo.dao.UserDAO;
+import ru.vierinmoon.springboot.demo.model.User;
 
 import java.util.List;
 

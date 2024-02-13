@@ -1,7 +1,11 @@
-package ru.vierinmoon.springboot.SpringBoot311.model;
+package ru.vierinmoon.springboot.demo.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
 
@@ -14,13 +18,19 @@ public class User {
     @Column(name="Id")
     private Long id;
 
-    @Column(name="name")
+    @Column(name = "name", nullable = false)
+    @NotBlank(message = "Name cannot be blank")
+    @Size(min =  2, max =  50, message = "Name must be between  2 and  50 characters")
     private String name;
 
-    @Column(name="surname")
+    @Column(name = "surname", nullable = false)
+    @NotBlank(message = "Surname cannot be blank")
+    @Size(min =  2, max =  100, message = "Surname must be between  2 and  100 characters")
     private String surname;
 
-    @Column(name="age")
+    @Column(name = "age", nullable = false)
+    @Min(value =  18, message = "Age must be at least  18")
+    @Max(value =  100, message = "Age must not exceed  100")
     private Integer age;
 
     public User() {
@@ -82,7 +92,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", surmane='" + surname + '\'' +
+                ", surname='" + surname + '\'' +
                 ", age=" + age +
                 '}';
     }
